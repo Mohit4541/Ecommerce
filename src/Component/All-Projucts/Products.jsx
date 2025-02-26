@@ -49,7 +49,6 @@ const Products = () => {
 
                 <NavLink to={`/Detail/${product.id}`}>
 
-                  Show Details
                 </NavLink>
               </button>
             </div>
