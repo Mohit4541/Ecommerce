@@ -11,6 +11,7 @@ import Login from './Component/form/Login.jsx'
 import Detail from './Component/All-Projucts/Detail.jsx'
 import { store } from './Component/Store/Store.js'
 import { Provider } from 'react-redux'
+import Cart from './Component/All-Projucts/Cart.jsx'
 
 const routeer = createBrowserRouter([
   {
@@ -37,10 +38,16 @@ const routeer = createBrowserRouter([
       {
         path: "/Womens",
         element: <Womens />
-      },{
+      },
+      {
         path: "Detail/:id",
         element: <Detail />
-      }]
+      },
+      {
+        path :"/Cart",
+        element : <Cart/>
+      }
+    ]
   }
 ])
 

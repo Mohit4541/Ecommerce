@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-    <div className='absolute bg bottom-[50px] right-[50px]'>
+    <div className='absolute  bg bottom-[50px] right-[50px]'>
 
 < ChangeTheam />
     </div>

@@ -32,25 +32,29 @@ const Products = () => {
 
   return (
     <>
-      <div className="p-5  ">
-        <h2 className="text-2xl font-bold text-center mb-6 ">Products</h2>
-        <div className="grid grid-cols-4 gap-5 ">
+      <div className="my-5 dark:bg-black rounded-2xl py-[50px]">
+        <h2 className="text-2xl font-bold text-center mb-6  dark:text-white">Products
+        </h2>
+        <div className="flex  justify-center flex-wrap gap-4 ">
           {products.map((product) => (
-            <div key={product.id} className="border p-4   text-center rounded-2xl dark:bg-slate-400 dark:text-white ">
+            <div key={product.id} className="border p-4   text-center rounded-2xl dark:bg-white ">
               <img src={product.image} alt={product.name} className="w-[] h-[150px] mx-auto object-contain" />
-              <h4 className="mt-2 font-semibold">{product.name}</h4>
+           <div>
+               <h4 className="mt-2 font-semibold">{product.name}</h4>
+            </div>
               <div className="flex justify-evenly items-center">
                 <p className="text-green-600 font-bold">${product.price}</p>
-               <CartButton />
+              <NavLink to={`/detail/${product.productId}`}>
+
+                <button className="cursor-pointer hover:text-blue-900 hover:font-bold px-[10px]">  Detail... </button>
+                
+            </NavLink>
               </div>
-              {/* <button  className="border px-2 bg-[#00bc7d] font-bold rounded-2xl cursor-pointer ">Add To Cart</button> */}
-
-              <button className='border border-amber-300 px-3 py-2'>
-
-                <NavLink to={`/Detail/${product.id}`}>
-
-                </NavLink>
-              </button>
+              <div className="flex justify-between  gap-[15px] mt-[5px]"> 
+                <button className="border-2 px-[15px] py-[5px] bg-gray-300 cursor-pointer">Add To Cart</button>
+                <button className="border-2 px-[15px] py-[5px] bg-gray-300 cursor-pointer">Buy Now</button>
+                </div>
+              
             </div>
           ))}
 
