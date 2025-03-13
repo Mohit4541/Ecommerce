@@ -16,7 +16,7 @@ const Detail = () => {
 
   return (
     <div className='my-5 dark:bg-black rounded-2xl py-[50px]'>
-      <h2 className="text-2xl font-bold text-center mb-6  dark:text-white">Men's Fashion</h2>
+      <h2 className="text-2xl font-bold text-center mb-6  dark:text-white underline">Dtail Page</h2>
       <div className='flex  justify-center flex-wrap gap-4'>
         {product.map((item)=>(
          <div key={item.id} className="border p-4   text-center rounded-2xl dark:bg-white ">

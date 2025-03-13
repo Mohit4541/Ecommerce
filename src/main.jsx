@@ -6,12 +6,15 @@ import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './Component/HomeElement/Home.jsx'
 import Mens from './Component/HomeElement/Mens.jsx'
 import Womens from './Component/HomeElement/Womens.jsx'
+// import Signup from './Component/form/Signup.jsx'
 import Signup from './Component/form/signup.jsx'
+
 import Login from './Component/form/Login.jsx'
 import Detail from './Component/All-Projucts/Detail.jsx'
 import { store } from './Component/Store/Store.js'
 import { Provider } from 'react-redux'
 import Cart from './Component/All-Projucts/Cart.jsx'
+import { ToastContainer, toast } from 'react-toastify';
 
 const routeer = createBrowserRouter([
   {
@@ -44,8 +47,8 @@ const routeer = createBrowserRouter([
         element: <Detail />
       },
       {
-        path :"/Cart",
-        element : <Cart/>
+        path: "/Cart",
+        element: <Cart />
       }
     ]
   }
@@ -55,10 +58,7 @@ const routeer = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
 
   <Provider store={store}>
-
     <RouterProvider router={routeer} />
+    <ToastContainer />
   </Provider>,
-
-
-
 )

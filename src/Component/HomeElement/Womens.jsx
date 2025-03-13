@@ -1,7 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom';
-import CartButton from "../Uiverse/Cartbtn";
 const Womens = () => {
   let {products} = useSelector((data)=>{return data.MyProducts})
   console.log(products)
@@ -13,7 +12,7 @@ const Womens = () => {
 
   return (
     <div className='my-5 dark:bg-black rounded-2xl py-[50px] '>
-      <h2 className="text-2xl font-bold text-center mb-6 dark:text-white ">Women's Fashion</h2>
+      <h2 className="text-2xl font-bold text-center mb-6 dark:text-white  underline">Women's Fashion</h2>
       <div className='flex  justify-center flex-wrap gap-4'>
         {Women.map((item)=>(
          <div key={item.id} className="border p-4   text-center rounded-2xl dark:bg-white">

@@ -1,6 +1,8 @@
 import React from 'react'
 import { useForm } from "react-hook-form"
 import {NavLink } from 'react-router-dom'
+// import { useForm } from 'react-hook-form'
+
 import Login from './Login'
 const signup = () => {
     const {
@@ -9,8 +11,18 @@ const signup = () => {
         watch,
         formState: { errors, isSubmitting },
     } = useForm()
-    function onSubmit(data) {
+    async function onSubmit(data) {
         console.log(data)
+        let response = await fetch('http://localhost:3000/Signup',{
+            method : "POST",
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body : JSON.stringify(data)
+            
+        })
+        let data2 = await response.json()
+        alert(data2.message)
     }
     return (
         <div className='border border-black bg-white w-[250px] m-auto'>
