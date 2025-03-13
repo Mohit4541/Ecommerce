@@ -10,25 +10,25 @@ import Footer from './Component/Footer'
 
 function App() {
 
- 
-  
+
+
 
   return (
     <>
-    <div className='absolute  bg bottom-[50px] right-[50px]'>
+      <div className='absolute  bg bottom-[50px] right-[50px]'>
 
-< ChangeTheam />
-    </div>
-      <Header/>
-    <Outlet/>
-    <Footer/>
-
-
+        < ChangeTheam />
+      </div>
+      <Header />
+      <Outlet />
+      <Footer />
 
 
 
-    
-    
+
+
+
+
     </>
   )
 }
